@@ -1,5 +1,3 @@
-package arquivos;
-
 
 public class peças {
     //PEGAR A POSIÇAO EX: B-6 e determinar a posiçao a ser alterada no array

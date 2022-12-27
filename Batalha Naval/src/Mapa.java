@@ -1,12 +1,11 @@
-package arquivos;
 import java.io.IOException;
 
 public class Mapa {
    
-    static void map() {
+    //printar o mapa (array de inteiros sendo 1 para a posiçao com navios e 0 para a sem navios)
+    void mapa1(int[] navios) {
         String contorno = "+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+\n";
         String espaco = "|     |     |     |     |     |     |     |     |     |     |\n";
-        boolean[] navios = {false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false};
 
         char[] letras = {'A','B','C','D','E','F','G','H','I','J'};
 
@@ -15,7 +14,7 @@ public class Mapa {
             System.out.print("  " + espaco);
             System.out.print(letras[i] + " |");
             for(int j =0;j < 10;j++){
-                if(navios[(i*10) +j ]){
+                if(navios[(i*10) +j ] == 1){
                 System.out.print("  N  |");}
                 else {System.out.print("     |");}}
             System.out.print("\n  " + espaco);
@@ -25,11 +24,8 @@ public class Mapa {
 
       }     
     
-    void clear() throws InterruptedException, IOException{
+    //funçao para limpar o console
+    static void clear() throws InterruptedException, IOException{
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-    }
-
-    public static void main(String[] args) {
-        map();
-    }
+    }}
 }

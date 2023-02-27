@@ -2,12 +2,7 @@ package jogo;
 
 import java.io.IOException;
 public class jogo {
-
-
-    //SETANDO O MAPA SEM NAVIOS PARA INICIO DO JOGo
-
-
-    
+ 
     static void game () throws InterruptedException,IOException {
         
         //LIMPANDO O MAPA DOS 2 JOGADORES

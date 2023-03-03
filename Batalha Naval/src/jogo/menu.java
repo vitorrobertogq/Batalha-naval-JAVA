@@ -17,7 +17,8 @@ System.out.print("▄█████████▀    ███    █▀     �
 
 System.out.print("1 - JOGAR\n\n");
 System.out.print("2 - TUTORIAL\n\n");
-System.out.print("3 - RANKING\n");
+System.out.print("3 - RANKING\n\n");
+System.out.print("R  :");
 
 Scanner sc5 = new Scanner(System.in);
 int escolha = sc5.nextInt();

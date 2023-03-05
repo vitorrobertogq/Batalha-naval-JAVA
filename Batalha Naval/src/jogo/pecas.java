@@ -9,7 +9,8 @@ public class pecas {
         String[] S = input.split("-");
         if(S.length != 2){return 100;}
         else if(!(isNumeric(S[1]))){return 100;}
-        else if(Integer.parseInt(S[1]) > 10 ) {return 100;} //FILTRANDO POSIÇOES INEXISTENTES1
+        else if(S[0] == ""){return 100;}
+        else if(Integer.parseInt(S[1]) > 10 ) {return 100;} //FILTRANDO POSIÇOES INEXISTENTES
         else if(S[0].charAt(0) == 'A' || S[0].charAt(0) == 'a'){return Integer.parseInt(S[1]) - 1;}
         else if(S[0].charAt(0) == 'B' || S[0].charAt(0) == 'b'){return 10 + Integer.parseInt(S[1]) - 1;}
         else if(S[0].charAt(0) == 'C' || S[0].charAt(0) == 'c'){return 20 + Integer.parseInt(S[1]) - 1;}

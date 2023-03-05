@@ -17,15 +17,9 @@ public class valida {
         int[] arrayDePosicoes = new int[nDePecas];
         for(int i = 0;i < nDePecas;i++){
             arrayDePosicoes[i] = pecas.posicao(array[i]);
-            if(mapa[arrayDePosicoes[i]] == 1){return false;}}
+            if(mapa[arrayDePosicoes[i]] != 0){return false;}}
 
-        Arrays.sort(arrayDePosicoes);
-
-        System.out.print(arrayDePosicoes[0]);
-        System.out.print(arrayDePosicoes[1]);
-        System.out.print(arrayDePosicoes[2]);
-        System.out.print(arrayDePosicoes[3]);
-        
+        Arrays.sort(arrayDePosicoes);     
 
         if(nDePecas != 5){
         for(int j = 1;j < nDePecas;j++){

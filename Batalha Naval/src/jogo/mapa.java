@@ -24,21 +24,21 @@ public class mapa{
             System.out.print("            " + letras[i] + " |");
             for(int j =0;j < 10;j++){
 
-                if(meusNavios[(i*10) +j ] == 1){
-                System.out.print("  N  |");}
-                else if(meusNavios[(i*10) +j ] == 2){
+                if(meusNavios[(i*10) +j ] == 0){
+                System.out.print("     |");}
+                else if(meusNavios[(i*10) +j ] == 9){
                 System.out.print("  D  |");}
-                else if(meusNavios[(i*10) +j ] == 3) {
+                else if(meusNavios[(i*10) +j ] == 10) {
                 System.out.print("  -  |");}
-                else {System.out.print("     |");}}
+                else {System.out.print("  N  |");}}
 
             System.out.print("           ");
             System.out.print("  " + letras[i] + " |");
             for(int j =0;j < 10;j++){
 
-                if(naviosInimigos[(i*10) +j ] == 2){
+                if(naviosInimigos[(i*10) +j ] == 9){
                 System.out.print("  D  |");}
-                else if(naviosInimigos[(i*10) +j ] == 3) {
+                else if(naviosInimigos[(i*10) +j ] == 10) {
                 System.out.print("  -  |");}
                 else {System.out.print("     |");}}
 

@@ -25,7 +25,7 @@ public class pecas {
         
     }
     
-    static int[] inputDefesa(int[] array,int nDePecas,int vez) {
+    static int[] inputDefesa(int[] array,int nDePecas,int vez,int tipoDeNavio) {
         Scanner sc1 = new Scanner(System.in);
         System.out.print(" VEZ DO JOGADOR " + vez + "\n");
         System.out.print(" Resposta (DEFESA)  : ");
@@ -34,9 +34,9 @@ public class pecas {
 
         if(valida.validaDefesa(A,nDePecas) && valida.validapecas(array, A, nDePecas)){
         for(int i = 0;i < nDePecas;i++) {
-            array[posicao(A[i])] = 1;}
+            array[posicao(A[i])] = tipoDeNavio;}
         return array;
-        } else {return inputDefesa(array, nDePecas,vez);}}
+        } else {return inputDefesa(array, nDePecas,vez,tipoDeNavio);}}
 
     static int[] inputAtaque(int [] arrayAtacada,int vez){
         Scanner sc2 = new Scanner(System.in);
@@ -45,13 +45,20 @@ public class pecas {
         String sac2 = sc2.nextLine();
         
 
-        if(posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] == 1){
-        arrayAtacada[posicao(sac2)] = 2;
-        System.out.print("\n TIRO!!\n ENTER PARA ATUALIZAR O MAPA ");
+        if(posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] != 0 && arrayAtacada[posicao(sac2)] != 9 && arrayAtacada[posicao(sac2)] != 10){
+        
+        if(arrayAtacada[posicao(sac2)] == 8){System.out.print("\n TIRO!! NO PORTA-AVIOES \n ENTER PARA ATUALIZAR O MAPA ");}
+        else if(arrayAtacada[posicao(sac2)] == 7){System.out.print("\n TIRO!! NO NAVIO DE 4 CANOS \n ENTER PARA ATUALIZAR O MAPA ");}
+        else if(arrayAtacada[posicao(sac2)] == 6 || arrayAtacada[posicao(sac2)] == 5){System.out.print("\n TIRO!! EM UM NAVIO DE 3 CANOS \n ENTER PARA ATUALIZAR O MAPA ");}
+        else if(arrayAtacada[posicao(sac2)] == 4 || arrayAtacada[posicao(sac2)] == 3 || arrayAtacada[posicao(sac2)] == 2){System.out.print("\n TIRO!! EM UM NAVIO DE 2 CANOS\n ENTER PARA ATUALIZAR O MAPA ");}
+        else if(arrayAtacada[posicao(sac2)] == 1){System.out.print("\n TIRO!! NAVIO DE 1 CANO AFUNDADO \n ENTER PARA ATUALIZAR O MAPA ");}
+        arrayAtacada[posicao(sac2)] = 9;
+        
+        
         sac2 = sc2.nextLine();
         return arrayAtacada;} 
         else if (posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] == 0) {
-        arrayAtacada[posicao(sac2)] = 3;
+        arrayAtacada[posicao(sac2)] = 10;
         System.out.print("\n ÁGUA!!\n ENTER PARA ATUALIZAR O MAPA ");
         sac2 = sc2.nextLine();
         return arrayAtacada;}
@@ -66,7 +73,7 @@ public class pecas {
         System.out.print("  █       ███      █          █\n");
         System.out.print("  █   ou   █   ou  ███  ou  ███\n"); 
         System.out.print(" ███       █       █          █\n\n");
-        return inputDefesa(array, 5,vez);
+        return inputDefesa(array, 5,vez,8);
         
     }
 
@@ -76,29 +83,29 @@ public class pecas {
         System.out.print("  █   ou   █████\n"); 
         System.out.print("  █ \n");
         System.out.print("  █ \n\n");
-        return inputDefesa(array, 4,vez);
+        return inputDefesa(array, 4,vez,7);
     }
 
-    static int[] colocarNavioDe3canos(int[] array,int vez) {
+    static int[] colocarNavioDe3canos(int[] array,int vez,int separar) {
         System.out.print(" Digite 3 posicoes de maneira que forme uma das seguinte posicoes (Obs : Digite as posicoes separadas por virgula)\n\n");
         System.out.print("  █             \n");
         System.out.print("  █   ou   ████\n"); 
         System.out.print("  █ \n\n");
-        return inputDefesa(array, 3,vez);
+        return inputDefesa(array, 3,vez,separar);
      
     }
 
-    static int[] colocarNavioDe2canos(int[] array,int vez) {
+    static int[] colocarNavioDe2canos(int[] array,int vez,int separar) {
         System.out.print(" Digite 2 posicoes de maneira que forme uma das seguinte posicoes (Obs : Digite as posicoes separadas por virgula)\n\n");
         System.out.print("  █             \n");
         System.out.print("  █   ou   ██\n\n"); 
-        return inputDefesa(array, 2,vez);
+        return inputDefesa(array, 2,vez,separar);
     }
 
     static int[] colocarNavioDe1cano(int[] array,int vez) {
         System.out.print(" Digite a posicao desejada para colocar a seguinte peca  :\n\n");
         System.out.print("  █ \n\n");
-        return inputDefesa(array, 1,vez);
+        return inputDefesa(array, 1,vez,1);
        }
 
     static int[] ataque(int[] atacada,int vez) {

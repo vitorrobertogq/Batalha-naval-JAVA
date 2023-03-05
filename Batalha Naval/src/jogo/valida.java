@@ -26,4 +26,11 @@ public class valida {
             if(arrayDePosicoes[0]+j != arrayDePosicoes[j]){if(arrayDePosicoes[0]+(10*j) != arrayDePosicoes[j]){return false;}}}}
         else{if(arrayDePosicoes[0]+10 != arrayDePosicoes[1] || arrayDePosicoes[0]+11 != arrayDePosicoes[2] || arrayDePosicoes[0]+12 != arrayDePosicoes[3] || arrayDePosicoes[0]+20 != arrayDePosicoes[4]){if(arrayDePosicoes[0]+8!= arrayDePosicoes[1] || arrayDePosicoes[0]+9 != arrayDePosicoes[2] || arrayDePosicoes[0]+10 != arrayDePosicoes[3] || arrayDePosicoes[0]+20 != arrayDePosicoes[4]){if(arrayDePosicoes[0]+10 != arrayDePosicoes[1] || arrayDePosicoes[0]+19 != arrayDePosicoes[2] || arrayDePosicoes[0]+20 != arrayDePosicoes[3] || arrayDePosicoes[0]+21 != arrayDePosicoes[4]){if(arrayDePosicoes[0]+1!= arrayDePosicoes[1] || arrayDePosicoes[0]+2 != arrayDePosicoes[2] || arrayDePosicoes[0]+11 != arrayDePosicoes[3] || arrayDePosicoes[0]+21 != arrayDePosicoes[4]){return false;}}}}}
         return true;
-}}
+    }
+
+    static boolean checarNavios(int[] array,int n){
+        for(int i = 0;i < 100;i++){
+            if(array[i] == n){return false;}
+        }
+        return true;
+    }}

@@ -47,19 +47,38 @@ public class pecas {
 
         if(posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] != 0 && arrayAtacada[posicao(sac2)] != 9 && arrayAtacada[posicao(sac2)] != 10){
         
-        if(arrayAtacada[posicao(sac2)] == 8){System.out.print("\n TIRO!! NO PORTA-AVIOES \n ENTER PARA ATUALIZAR O MAPA ");}
-        else if(arrayAtacada[posicao(sac2)] == 7){System.out.print("\n TIRO!! NO NAVIO DE 4 CANOS \n ENTER PARA ATUALIZAR O MAPA ");}
-        else if(arrayAtacada[posicao(sac2)] == 6 || arrayAtacada[posicao(sac2)] == 5){System.out.print("\n TIRO!! EM UM NAVIO DE 3 CANOS \n ENTER PARA ATUALIZAR O MAPA ");}
-        else if(arrayAtacada[posicao(sac2)] == 4 || arrayAtacada[posicao(sac2)] == 3 || arrayAtacada[posicao(sac2)] == 2){System.out.print("\n TIRO!! EM UM NAVIO DE 2 CANOS\n ENTER PARA ATUALIZAR O MAPA ");}
-        else if(arrayAtacada[posicao(sac2)] == 1){System.out.print("\n TIRO!! NAVIO DE 1 CANO AFUNDADO \n ENTER PARA ATUALIZAR O MAPA ");}
+        if(arrayAtacada[posicao(sac2)] == 8){System.out.print("\n TIRO!! NO PORTA-AVIOES\n");
         arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 8)){System.out.print(" PORTA AVIOES AFUNDOU !!\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 7){System.out.print("\n TIRO!! NO NAVIO DE 4 CANOS\n");
+        arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 7)){System.out.print(" NAVIO DE 4 CANOS AFUNDOU\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 6){System.out.print("\n TIRO!! EM UM NAVIO DE 3 CANOS\n");
+        arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 6)){System.out.print(" UM NAVIO DE 3 CANOS AFUNDOU\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 5){System.out.print("\n TIRO!! EM UM NAVIO DE 3 CANOS\n");
+        arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 5)){System.out.print(" UM NAVIO DE 3 CANOS AFUNDOU\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 4){System.out.print("\n TIRO!! EM UM NAVIO DE 2 CANOS\n");
+        arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 4)){System.out.print(" UM NAVIO DE 2 CANOS AFUNDOU\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 3){System.out.print("\n TIRO!! EM UM NAVIO DE 2 CANOS\n");
+        arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 3)){System.out.print(" UM NAVIO DE 2 CANOS AFUNDOU\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 2){System.out.print("\n TIRO!! EM UM NAVIO DE 2 CANOS\n");
+        arrayAtacada[posicao(sac2)] = 9;
+        if(valida.checarNavios(arrayAtacada, 2)){System.out.print(" UM NAVIO DE 2 CANOS AFUNDOU\n");}}
+        else if(arrayAtacada[posicao(sac2)] == 1){System.out.print("\n TIRO!! NAVIO DE 1 CANO AFUNDADO\n");
+        arrayAtacada[posicao(sac2)] = 9;}
         
+        System.out.print(" ENTER PARA ATUALIZAR MAPA");
         
         sac2 = sc2.nextLine();
         return arrayAtacada;} 
         else if (posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] == 0) {
         arrayAtacada[posicao(sac2)] = 10;
-        System.out.print("\n ÁGUA!!\n ENTER PARA ATUALIZAR O MAPA ");
+        System.out.print("\n ÁGUA!!\n ");
+        System.out.print("ENTER PARA ATUALIZAR MAPA");
         sac2 = sc2.nextLine();
         return arrayAtacada;}
         else {return inputAtaque(arrayAtacada,vez);}

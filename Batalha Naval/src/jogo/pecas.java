@@ -31,7 +31,7 @@ public class pecas {
         String sac1 = sc1.nextLine();
         String[] A = sac1.split(",");
 
-        if(valida.validaDefesa(A,nDePecas)){
+        if(valida.validaDefesa(A,nDePecas) && valida.validapecas(array, A, nDePecas)){
         for(int i = 0;i < nDePecas;i++) {
             array[posicao(A[i])] = 1;}
         return array;
@@ -46,9 +46,13 @@ public class pecas {
 
         if(posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] == 1){
         arrayAtacada[posicao(sac2)] = 2;
+        System.out.print("\n TIRO!!\n ENTER PARA ATUALIZAR O MAPA ");
+        sac2 = sc2.nextLine();
         return arrayAtacada;} 
         else if (posicao(sac2) < 100 && arrayAtacada[posicao(sac2)] == 0) {
         arrayAtacada[posicao(sac2)] = 3;
+        System.out.print("\n ÁGUA!!\n ENTER PARA ATUALIZAR O MAPA ");
+        sac2 = sc2.nextLine();
         return arrayAtacada;}
         else {return inputAtaque(arrayAtacada,vez);}
 
@@ -101,11 +105,13 @@ public class pecas {
     }
 
 
-public static boolean isNumeric(String str) { 
-    try {  
-      Double.parseDouble(str);  
-      return true;
-    } catch(NumberFormatException e){  
-      return false;  
-    }  }}
+    public static boolean isNumeric(String str) { 
+        try {  
+        Double.parseDouble(str);  
+        return true;
+        } catch(NumberFormatException e){  
+        return false;  
+            }  
+        }
+    }
   

@@ -28,7 +28,7 @@ public class mapa{
                 System.out.print("  N  |");}
                 else if(meusNavios[(i*10) +j ] == 2){
                 System.out.print("  D  |");}
-                else if(naviosInimigos[(i*10) +j ] == 3) {
+                else if(meusNavios[(i*10) +j ] == 3) {
                 System.out.print("  -  |");}
                 else {System.out.print("     |");}}
 

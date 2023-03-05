@@ -8,7 +8,7 @@ public class acabarjogo {
         int numeroDeNavios = 0;
 
         for(int i = 0;i < 100;i++) {
-            if(array[i] == 1){numeroDeNavios = 1;}
+            if(array[i] == 1 || array[i] == 2|| array[i] == 3|| array[i] == 4|| array[i] == 5|| array[i] == 6 || array[i] == 7|| array[i] == 8){numeroDeNavios = 1;}
         }
 
         if(numeroDeNavios != 0){

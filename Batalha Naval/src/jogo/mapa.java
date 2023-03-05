@@ -7,7 +7,7 @@ public class mapa{
     static void clear() throws InterruptedException, IOException{
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
-    //printar o mapa (array de inteiros sendo 1 para a posiçao com navios e 0 para a sem navios)
+    //printar o mapa (10 = TIRO NA AGUA,9 = ESTRUTURAS DESTRUIDAS, 8 = PORTA-AVIAO,7 = NAVIO DE 4 CANOS,6 e 5 = NAVIOS DE 3 CANOS,4,3 e 2 = NAVIOS DE 2 CANOS,1 = NAVIO DE 1 CANOS E 0 = POSICAO SEM NAVIO)
     static void imprimirMapa(int[] meusNavios,int[] naviosInimigos) throws InterruptedException, IOException {
         clear();
 

@@ -3,7 +3,8 @@ package jogo;
 import java.io.IOException;
 
 public class acabarjogo {
-    static boolean vitoria (int[] array) {
+    static boolean vitoria (int[] array)// FUNCAO QUE CHECA SE O JOGO ACABOU
+    {
         int numeroDeNavios = 0;
 
         for(int i = 0;i < 100;i++) {
@@ -15,7 +16,9 @@ public class acabarjogo {
         } else {return true;}
     }
 
-    static void telaDeVitoria(int n) throws InterruptedException, IOException {
+    //FUNCAO CASO O JOGO ACABE
+    static void telaDeVitoria(int n) throws InterruptedException, IOException 
+    {
         mapa.clear();
         
     System.out.print("      ███████╗██╗███╗   ███╗    ██████╗ ███████╗         ██╗ ██████╗  ██████╗  ██████╗ \n");

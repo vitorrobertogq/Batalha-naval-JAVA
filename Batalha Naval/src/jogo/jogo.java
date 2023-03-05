@@ -7,7 +7,7 @@ public class jogo {
     int [] jogador1 = colocarpeças.inicio(1);
     int [] jogador2 = colocarpeças.inicio(2);
 
-    while(true)
+    while(true) //CICLO INFINITO ATÉ A FUNCAO ACABARJOGO.VITORIA CHECAR UM MAPA SEM NAVIOS
     {
         mapa.imprimirMapa(jogador1, jogador2);
         jogador2 = pecas.ataque(jogador2,1);//JOGADOR 2 SOFRE ATAQUE DE JOGADOR 1
@@ -31,8 +31,8 @@ public class jogo {
         if(acabarjogo.vitoria(jogador2)) {break;}
         mapa.imprimirMapa(jogador2, jogador1);
        }
-    if(acabarjogo.vitoria(jogador2) == true){acabarjogo.telaDeVitoria(1);}
-    else if(acabarjogo.vitoria(jogador1) == true) {acabarjogo.telaDeVitoria(2);}
+    if(acabarjogo.vitoria(jogador2) == true){acabarjogo.telaDeVitoria(1);} // SE O JOGADOR 1 GANHAR
+    else if(acabarjogo.vitoria(jogador1) == true) {acabarjogo.telaDeVitoria(2);}// SE O JOGADOR 2 GANHAR
         }
     }
 

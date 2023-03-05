@@ -11,7 +11,7 @@ public class colocarpeças {
             jogador1[i] = 0;
             jogador2[i] = 0;
         }
-
+        //EXECUCAO DAS FUNCOES VINDAS DE PECAS PARA REDUZIR FUNCOES NA CLASSE JOGO
         mapa.imprimirMapa(jogador1,jogador2);
         jogador1 = pecas.colocarPortaAvioes(jogador1,vez);
         mapa.imprimirMapa(jogador1,jogador2);

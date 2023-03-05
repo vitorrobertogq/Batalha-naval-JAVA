@@ -25,7 +25,8 @@ public class pecas {
         
     }
     
-    static int[] inputDefesa(int[] array,int nDePecas,int vez,int tipoDeNavio) {
+    static int[] inputDefesa(int[] array,int nDePecas,int vez,int tipoDeNavio) //PEGA O INPUT DAS PEÇAS E FILTRA ERROS
+    {
         Scanner sc1 = new Scanner(System.in);
         System.out.print(" VEZ DO JOGADOR " + vez + "\n");
         System.out.print(" Resposta (DEFESA)  : ");
@@ -36,9 +37,11 @@ public class pecas {
         for(int i = 0;i < nDePecas;i++) {
             array[posicao(A[i])] = tipoDeNavio;}
         return array;
-        } else {return inputDefesa(array, nDePecas,vez,tipoDeNavio);}}
+        } else {return inputDefesa(array, nDePecas,vez,tipoDeNavio);}
+    }
 
-    static int[] inputAtaque(int [] arrayAtacada,int vez){
+    static int[] inputAtaque(int [] arrayAtacada,int vez) // PEGA O INPUT DO ATAQUE E FILTRA ERROS
+    {
         Scanner sc2 = new Scanner(System.in);
         System.out.print(" VEZ DO JOGADOR " + vez + "\n");
         System.out.print(" Resposta (ATAQUE)  : ");
@@ -132,7 +135,8 @@ public class pecas {
     }
 
 
-    public static boolean isNumeric(String str) { 
+    public static boolean isNumeric(String str) //FUNCAO PRA TESTAR SE É NUMERICO PRA EVITAR ERRO NO INPUT
+    { 
         try {  
         Double.parseDouble(str);  
         return true;

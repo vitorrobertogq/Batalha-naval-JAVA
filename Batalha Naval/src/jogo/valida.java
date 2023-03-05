@@ -3,7 +3,8 @@ import java.util.Arrays;
 
 
 public class valida {
-    static boolean validaDefesa (String [] inputs,int nDePecas) {
+    static boolean validaDefesa (String [] inputs,int nDePecas) //VALIDACAO PARA NAVIOS SOBREPOSTOS OU INPUTS ERRADOS
+    {
         if(inputs.length != nDePecas){return false;}
         
         for(int i = 0;i < nDePecas;i++) {
@@ -13,7 +14,8 @@ public class valida {
         
     }
 
-    static boolean validapecas(int[] mapa, String [] array,int nDePecas) {
+    static boolean validapecas(int[] mapa, String [] array,int nDePecas) //VALIDACAO PARA ESTRUTURAS IRREGULARES
+    {
         int[] arrayDePosicoes = new int[nDePecas];
         for(int i = 0;i < nDePecas;i++){
             arrayDePosicoes[i] = pecas.posicao(array[i]);
@@ -28,7 +30,8 @@ public class valida {
         return true;
     }
 
-    static boolean checarNavios(int[] array,int n){
+    static boolean checarNavios(int[] array,int n)// FUNCAO PARA CHECAR SE CERTA ESTRUTURA AFUNDOU
+    {
         for(int i = 0;i < 100;i++){
             if(array[i] == n){return false;}
         }

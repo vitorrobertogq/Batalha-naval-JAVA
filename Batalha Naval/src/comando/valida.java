@@ -1,24 +1,26 @@
-package jogo;
+package comando;
 import java.util.Arrays;
+
+import pecas.lugar;
 
 
 public class valida {
-    static boolean validaDefesa (String [] inputs,int nDePecas) //VALIDACAO PARA NAVIOS SOBREPOSTOS OU INPUTS ERRADOS
+    public static boolean validaDefesa (String [] inputs,int nDePecas) //VALIDACAO PARA NAVIOS SOBREPOSTOS OU INPUTS ERRADOS
     {
         if(inputs.length != nDePecas){return false;}
         
         for(int i = 0;i < nDePecas;i++) {
-            if(pecas.posicao(inputs[i]) == 100){return false;}
+            if(lugar.posicao(inputs[i]) == 100){return false;}
         }
         return true;
         
     }
 
-    static boolean validapecas(int[] mapa, String [] array,int nDePecas) //VALIDACAO PARA ESTRUTURAS IRREGULARES
+    public static boolean validapecas(int[] mapa, String [] array,int nDePecas) //VALIDACAO PARA ESTRUTURAS IRREGULARES
     {
         int[] arrayDePosicoes = new int[nDePecas];
         for(int i = 0;i < nDePecas;i++){
-            arrayDePosicoes[i] = pecas.posicao(array[i]);
+            arrayDePosicoes[i] = lugar.posicao(array[i]);
             if(mapa[arrayDePosicoes[i]] != 0){return false;}}
 
         Arrays.sort(arrayDePosicoes);     
@@ -30,7 +32,7 @@ public class valida {
         return true;
     }
 
-    static boolean checarNavios(int[] array,int n)// FUNCAO PARA CHECAR SE CERTA ESTRUTURA AFUNDOU
+    public static boolean checarNavios(int[] array,int n)// FUNCAO PARA CHECAR SE CERTA ESTRUTURA AFUNDOU
     {
         for(int i = 0;i < 100;i++){
             if(array[i] == n){return false;}

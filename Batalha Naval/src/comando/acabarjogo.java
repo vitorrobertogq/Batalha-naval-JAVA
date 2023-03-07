@@ -1,9 +1,11 @@
-package jogo;
+package comando;
 
 import java.io.IOException;
 
+import telas.mapa;
+
 public class acabarjogo {
-    static boolean vitoria (int[] array)// FUNCAO QUE CHECA SE O JOGO ACABOU
+    public static boolean vitoria (int[] array)// FUNCAO QUE CHECA SE O JOGO ACABOU
     {
         int numeroDeNavios = 0;
 
@@ -17,7 +19,7 @@ public class acabarjogo {
     }
 
     //FUNCAO CASO O JOGO ACABE
-    static void telaDeVitoria(int n) throws InterruptedException, IOException 
+    public static void telaDeVitoria(int n) throws InterruptedException, IOException 
     {
         mapa.clear();
         

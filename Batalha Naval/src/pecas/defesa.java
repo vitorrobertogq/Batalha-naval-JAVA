@@ -5,7 +5,10 @@ import comando.valida;
 
 
 public class defesa {
-    static int[] inputDefesa(int[] array,int nDePecas,int vez,int tipoDeNavio) //PEGA O INPUT DAS PEÇAS E FILTRA ERROS
+    valida valida = new valida();
+    lugar lugar = new lugar();
+    
+    int[] inputDefesa(int[] array,int nDePecas,int vez,int tipoDeNavio) //PEGA O INPUT DAS PEÇAS E FILTRA ERROS
     {
         Scanner sc1 = new Scanner(System.in);
         System.out.print(" VEZ DO JOGADOR " + vez + "\n");

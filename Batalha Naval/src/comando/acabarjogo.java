@@ -5,7 +5,8 @@ import java.io.IOException;
 import telas.mapa;
 
 public class acabarjogo {
-    public static boolean vitoria (int[] array)// FUNCAO QUE CHECA SE O JOGO ACABOU
+    mapa mapa = new mapa();
+    public boolean vitoria (int[] array)// FUNCAO QUE CHECA SE O JOGO ACABOU
     {
         int numeroDeNavios = 0;
 
@@ -19,7 +20,7 @@ public class acabarjogo {
     }
 
     //FUNCAO CASO O JOGO ACABE
-    public static void telaDeVitoria(int n) throws InterruptedException, IOException 
+    public void telaDeVitoria(int n) throws InterruptedException, IOException 
     {
         mapa.clear();
         

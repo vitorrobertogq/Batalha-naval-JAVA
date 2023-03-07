@@ -7,7 +7,13 @@ import pecas.ataque;
 import telas.mapa;
 public class jogo {
 
-    public static void game() throws InterruptedException, IOException {
+    public void game() throws InterruptedException, IOException {
+
+    montarTabuleiro montarTabuleiro = new montarTabuleiro();
+    mapa mapa = new mapa();
+    acabarjogo acabarjogo = new acabarjogo();
+    ataque ataque = new ataque();
+
     int [] jogador1 = montarTabuleiro.inicio(1);
     int [] jogador2 = montarTabuleiro.inicio(2);
 

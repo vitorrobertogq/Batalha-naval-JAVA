@@ -5,7 +5,8 @@ import pecas.lugar;
 
 
 public class valida {
-    public static boolean validaDefesa (String [] inputs,int nDePecas) //VALIDACAO PARA NAVIOS SOBREPOSTOS OU INPUTS ERRADOS
+    lugar lugar = new lugar();
+    public boolean validaDefesa (String [] inputs,int nDePecas) //VALIDACAO PARA NAVIOS SOBREPOSTOS OU INPUTS ERRADOS
     {
         if(inputs.length != nDePecas){return false;}
         
@@ -16,7 +17,7 @@ public class valida {
         
     }
 
-    public static boolean validapecas(int[] mapa, String [] array,int nDePecas) //VALIDACAO PARA ESTRUTURAS IRREGULARES
+    public boolean validapecas(int[] mapa, String [] array,int nDePecas) //VALIDACAO PARA ESTRUTURAS IRREGULARES
     {
         int[] arrayDePosicoes = new int[nDePecas];
         for(int i = 0;i < nDePecas;i++){
@@ -32,7 +33,7 @@ public class valida {
         return true;
     }
 
-    public static boolean checarNavios(int[] array,int n)// FUNCAO PARA CHECAR SE CERTA ESTRUTURA AFUNDOU
+    public boolean checarNavios(int[] array,int n)// FUNCAO PARA CHECAR SE CERTA ESTRUTURA AFUNDOU
     {
         for(int i = 0;i < 100;i++){
             if(array[i] == n){return false;}

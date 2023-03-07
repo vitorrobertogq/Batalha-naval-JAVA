@@ -4,11 +4,11 @@ import java.io.IOException;
 
 
 public class mapa{
-    public static void clear() throws InterruptedException, IOException{
+    public void clear() throws InterruptedException, IOException{
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
     //printar o mapa (10 = TIRO NA AGUA,9 = ESTRUTURAS DESTRUIDAS, 8 = PORTA-AVIAO,7 = NAVIO DE 4 CANOS,6 e 5 = NAVIOS DE 3 CANOS,4,3 e 2 = NAVIOS DE 2 CANOS,1 = NAVIO DE 1 CANOS E 0 = POSICAO SEM NAVIO)
-    public static void imprimirMapa(int[] meusNavios,int[] naviosInimigos) throws InterruptedException, IOException {
+    public void imprimirMapa(int[] meusNavios,int[] naviosInimigos) throws InterruptedException, IOException {
         clear();
 
 

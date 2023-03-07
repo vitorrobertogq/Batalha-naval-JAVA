@@ -5,7 +5,11 @@ import pecas.colocar;
 import telas.mapa;
 
 public class montarTabuleiro {
-    public static int [] inicio (int vez) throws InterruptedException, IOException {
+
+    colocar colocar = new colocar();
+    mapa mapa = new mapa();
+    
+    public int [] inicio (int vez) throws InterruptedException, IOException {
         int[] jogador1 = new int[100];
         int[] jogador2 = new int[100];
 

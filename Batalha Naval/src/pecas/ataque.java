@@ -4,7 +4,11 @@ import java.util.Scanner;
 import comando.valida;
 
 public class ataque {
-    static int[] inputAtaque(int [] arrayAtacada,int vez) // PEGA O INPUT DO ATAQUE E FILTRA ERROS
+
+    lugar lugar = new lugar();
+    valida valida = new valida();
+    
+    int[] inputAtaque(int [] arrayAtacada,int vez) // PEGA O INPUT DO ATAQUE E FILTRA ERROS
     {
         Scanner sc2 = new Scanner(System.in);
         System.out.print(" VEZ DO JOGADOR " + vez + "\n");
@@ -52,7 +56,7 @@ public class ataque {
 
     }
 
-    public static int[] atacar(int[] atacada,int vez) {
+    public int[] atacar(int[] atacada,int vez) {
         return inputAtaque(atacada,vez);
     }
 }

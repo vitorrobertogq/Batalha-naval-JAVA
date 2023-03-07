@@ -9,9 +9,13 @@ import jogo.jogo;
 
 public class menu {
 
+tela1 tutorial = new tela1();
+tela2 ranking = new tela2();
+jogo jogo = new jogo();
+
 
 //PRINT DO MENU E INPUT DA ESCOLHA DO USUARIO
-public static void printMenu() throws InterruptedException, IOException{
+public void printMenu() throws InterruptedException, IOException{
 System.out.print("▀█████████▄     ▄████████     ███        ▄████████  ▄█          ▄█    █▄       ▄████████      ███▄▄▄▄      ▄████████  ▄█    █▄     ▄████████  ▄█      \n");
 System.out.print("  ███    ███   ███    ███ ▀█████████▄   ███    ███ ███         ███    ███     ███    ███      ███▀▀▀██▄   ███    ███ ███    ███   ███    ███ ███      \n");
 System.out.print("  ███    ███   ███    ███    ▀███▀▀██   ███    ███ ███         ███    ███     ███    ███      ███   ███   ███    ███ ███    ███   ███    ███ ███      \n");
@@ -31,8 +35,8 @@ int escolha = sc5.nextInt();
 
 
 if(escolha == 1){jogo.game();}
-else if(escolha == 2){tela1.tutorial();}
-else if(escolha == 3){tela2.ranking();}
+else if(escolha == 2){tutorial.tutorial();}
+else if(escolha == 3){ranking.ranking();}
 
 
     }

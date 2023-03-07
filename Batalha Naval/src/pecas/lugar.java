@@ -4,7 +4,7 @@ public class lugar {
     
         //PEGAR A POSIcAO EX: B-6 e determinar a posicao a ser alterada no array
          
-        public static int posicao(String input) {
+        public int posicao(String input) {
             String[] S = input.split("-");
             if(S.length != 2){return 100;}
             else if(!(isNumeric(S[1]))){return 100;}
@@ -24,7 +24,7 @@ public class lugar {
             
         }
 
-        public static boolean isNumeric(String str) //FUNCAO PRA TESTAR SE É NUMERICO PRA EVITAR ERRO NO INPUT
+        public boolean isNumeric(String str) //FUNCAO PRA TESTAR SE É NUMERICO PRA EVITAR ERRO NO INPUT
     { 
         try {  
         Double.parseDouble(str);  

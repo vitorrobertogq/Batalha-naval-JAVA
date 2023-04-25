@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.tutorialController">
    <children>
-      <Button fx:id="voltar" layoutX="943.0" layoutY="28.0" mnemonicParsing="false" onAction="#trocarParaMenu" text="Voltar" />
-      <Label layoutX="94.0" layoutY="142.0" text="Label" />
-      <TextArea layoutX="146.0" layoutY="284.0" prefHeight="200.0" prefWidth="200.0" promptText="Batalha Naval é um jogo que em sendo popular por várias gerações. O jogo original de papel e caneta inspirou vários jogos de tabuleiro, versões eletrônicas portáteis, jogos de computador, e até mesmo um filme. Entretanto, mesmo depois de todas essas versões e mudanças de regras, o jogo ainda continua simples o suficiente para ser jogado apenas com um papel quadriculado e canetas." />
+      <Button fx:id="voltar" layoutX="943.0" layoutY="28.0" mnemonicParsing="false" onAction="#trocarParaMenu" text="Jogar!!" />
+      <TextArea layoutX="42.0" layoutY="41.0" opacity="0.75" prefHeight="150.0" prefWidth="434.0" promptText="Batalha Naval é um jogo que em sendo popular por várias gerações. O jogo original de papel e caneta inspirou vários jogos de tabuleiro, versões eletrônicas portáteis, jogos de computador, e até mesmo um filme. Entretanto, mesmo depois de todas essas versões e mudanças de regras, o jogo ainda continua simples o suficiente para ser jogado apenas com um papel quadriculado e canetas.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="512.0" layoutY="515.0" opacity="0.75" prefHeight="103.0" prefWidth="434.0" promptText=" 2 - Aprenda a dar um tiro. Cada jogador usa a grade superior de sua caixa, que não possui nenhum navio colocado sobre ela, para manter o controle de seus &quot;tiros&quot; nos navios inimigos. Para dar um tiro, escolha um quadrado sobre a grade." />
+      <TextArea layoutX="53.0" layoutY="642.0" opacity="0.75" prefHeight="103.0" prefWidth="434.0" promptText="3 - Controle os tiros. Se um jogador erra um tiro, ele deve colocar um pino branco no buraco de sua grade superior, e segundo jogador deve colocar um pino branco no buraco de sua grade inferior. Se o primeiro jogador acertar, ambos os jogadores usam um pino vermelho, e o segundo jogador coloca o pino diretamente no buraco da parte superior do navio, onde ele foi acertado." />
+      <TextArea layoutX="53.0" layoutY="515.0" opacity="0.75" prefHeight="103.0" prefWidth="434.0" promptText="1 - Cada jogador deve organizar secretamente seus navios. Com as caixas abertas, e os jogadores sentados um diante do outro, cada jogador deve colocar os seus navios na grade inferior. Siga estas regras para determinar onde colocar os seus navios:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="512.0" layoutY="642.0" opacity="0.75" prefHeight="43.0" prefWidth="434.0" promptText="4 - Quem tiver todos os navios destruidos é desclassificado do jogo e o jogador adversario leva a vitória!" />
    </children>
 </Pane>

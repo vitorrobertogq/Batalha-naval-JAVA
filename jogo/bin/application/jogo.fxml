@@ -76,5 +76,6 @@
       <Label fx:id="chat" layoutX="75.0" layoutY="649.0" text="AVISOS :" textFill="WHITE" />
       <Label fx:id="avisos" layoutX="126.0" layoutY="649.0" />
       <Label fx:id="text" layoutX="872.0" layoutY="38.0" text="Direção Atual:⬆️" />
+      <Button layoutX="893.0" layoutY="68.0" mnemonicParsing="false" onAction="#trocarParaMenu" text="--&gt; Menu" />
    </children>
 </AnchorPane>

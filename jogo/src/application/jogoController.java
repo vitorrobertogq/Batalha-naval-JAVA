@@ -44,6 +44,7 @@ public class jogoController implements Initializable {
 	private Parent root;
 	
 	
+	
 	funcaobutao funcoesb = new funcaobutao();
 	funcoesDeValidacao valida = new funcoesDeValidacao();
 	
@@ -56,6 +57,15 @@ public class jogoController implements Initializable {
 	static int Tiros = 3;
 	static String texto = "Vez do Jogador";
 	
+	public void trocarParaMenu(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+		stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		String css = this.getClass().getResource("menu.css").toExternalForm();
+        scene.getStylesheets().add(css);
+		stage.setScene(scene);
+		stage.show();
+	}
 	public boolean acabouOjogo(int[]array) {
 		for(int p = 9;p<100;p++) {
 			if(array[p]== 1 || array[p]== 2 ||array[p]== 3||array[p]== 4||array[p]== 5) {

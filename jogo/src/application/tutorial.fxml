@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.tutorialController">
+   <children>
+      <Button fx:id="voltar" layoutX="943.0" layoutY="28.0" mnemonicParsing="false" onAction="#trocarParaMenu" text="Voltar" />
+      <Label layoutX="94.0" layoutY="142.0" text="Label" />
+      <TextArea layoutX="146.0" layoutY="284.0" prefHeight="200.0" prefWidth="200.0" promptText="Batalha Naval é um jogo que em sendo popular por várias gerações. O jogo original de papel e caneta inspirou vários jogos de tabuleiro, versões eletrônicas portáteis, jogos de computador, e até mesmo um filme. Entretanto, mesmo depois de todas essas versões e mudanças de regras, o jogo ainda continua simples o suficiente para ser jogado apenas com um papel quadriculado e canetas." />
+   </children>
+</Pane>
